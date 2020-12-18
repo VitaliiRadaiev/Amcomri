@@ -1,0 +1,370 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+// ==== ШРИФТЫ ===========================================================================================
+@import "fonts";
+// ==== // ШРИФТЫ ===========================================================================================
+
+// ==== ПЕРЕМЕННЫЕ ===========================================================================================
+@import "vars"; 
+// ==== // ПЕРЕМЕННЫЕ ===========================================================================================
+
+
+// ==== НОРМАЛАЙЗ ===========================================================================================
+@import "normalize";
+// ==== // НОРМАЛАЙЗ ===========================================================================================
+
+//<МИКСИНЫ>===============================================================================================
+@import "mixins.scss";
+//</МИКСИНЫ>===============================================================================================
+
+//<ICOMOON>===============================================================================================
+@import "../icomoon/style";
+//</ICOMOON>===============================================================================================
+
+//<FANCYBOX>===============================================================================================
+//@import "fancybox.scss";
+//<FANCYBOX>===============================================================================================
+
+// ==== ПЛАГИНЫ ===========================================================================================
+@import "swiper-bundle";
+//@import "drift-basic";
+// ==== // ПЛАГИНЫ ===========================================================================================
+
+// ==== НАЧАЛЬНЫЕ САТИЛИ ФОРМЫ ===========================================================================================
+//@import "forms";
+// ==== НАЧАЛЬНЫЕ САТИЛИ ФОРМЫ ===========================================================================================
+
+// ==== BORDER ===========================================================================================
+@import "burger";
+// ==== BORDER ===========================================================================================
+
+// ==== POPUP ===========================================================================================
+@import "popup";
+// ==== // POPUP ===========================================================================================
+
+
+
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+aside,
+nav,
+footer,
+header,
+section {
+	display: block;
+}
+html {
+	font-size: 10px;
+}
+html,
+body {
+	height: 100%;
+	min-width: $minwidth;
+	margin: 0 auto;
+}
+body {
+	line-height: 1;
+	font-family: $mainFontFamily;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	color: $textColor;
+	font-size: 1.2rem;
+
+	opacity: 0;
+	transition: opacity .8s ease;
+
+	&.lock {
+		overflow: hidden;
+	}
+
+	&.is-load {
+		opacity: 1;
+	}
+
+}
+
+input,
+button,
+textarea {
+	font-family: $mainFontFamily;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+// 	font-weight: inherit;
+// 	font-size: inherit;
+// }
+
+
+
+.center {
+	text-align: center;
+}
+
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	&.loaded {
+	}
+}
+
+
+.container {
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.ibg {
+	position: relative;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+
+.logo {
+	max-width: 267px;
+	width: 100%;
+
+	& img {
+		width: 100%;
+	}
+}
+
+
+// === title ========================================================================
+.title-1 {
+
+}
+.title-2 {
+	font-family: $titleFontFamily;
+	font-size: 50px;
+	font-weight: 700;
+	line-height: 1.3em;
+	text-transform: uppercase;
+	color: $mainColor;
+	margin-top: 0;
+
+	@media (max-width: $md3+px) {
+		font-size: 40px;
+	}
+
+	@media (max-width: $md4+px) {
+		font-size: 27px;
+	}
+}
+
+.title-3 {
+
+}
+
+.title-4 {
+
+}
+
+.title-5 {
+
+
+}
+
+.suptitle {
+
+}
+
+.text {
+
+}
+// === and title ========================================================================
+
+
+
+// === btn ========================================================================
+.btn-default {
+	display: inline-flex;
+	font-size: 20px;
+	min-width: 14.25em;
+	min-height: 3.1em;
+	padding-right: 2.5em;
+	position: relative;
+	color: $mainColor;
+	border: 1px solid $mainColor;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-family: $titleFontFamily;
+	transition: all .2s ease;
+
+	@media (max-width: $md4+px) {
+		font-size: 16px;
+	}
+
+	@media (min-width: 992px) {
+		&:hover {
+			color: #fff;
+			background: $mainColor;
+
+			&:before {
+				right: 1.5em;
+			}
+		}
+	}
+
+	&:before {
+		position: absolute;
+		font-family: 'icomoon';
+		content: "\e904";
+		right: 2em;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: all .2s ease;
+		color: inherit;
+		font-size: 0.9em;
+	}
+
+	& > span {
+		flex: 1 1 auto;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		padding: 5px 10px;
+	}
+}
+
+button.btn-default {
+	
+}
+
+// === and btn ========================================================================
+
+.input {
+
+}
+
+.textarea {
+
+}
+
+.link {
+
+}
+
+
+// === TEXT CONTETN BLOCK ========================================================================
+.text-content {
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1.74em;
+
+	& h1 {}
+	& h2 {
+
+	}
+	& h3 {}
+	& h4 {}
+
+	& h5 {
+
+	}
+	& h6 {}
+
+	& p {
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 1.8em;
+		margin-bottom: 1.66em;
+	}
+
+	& ul {
+
+	}
+
+	& ol {}
+
+	& figure {}
+
+}
+// === and TEXT CONTETN BLOCK ========================================================================
+
+
+// ==== GLOBAL =====================================================
+@import "_global";
+// ==== AND GLOBAL =====================================================
+
+// ==== BLOCKS =====================================================
+@import "#header";
+@import "#footer";
+// ==== BLOCKS =====================================================
+
+
+// ==== PAGES =====================================================
+
+	// ==== HOME =====================================================
+	@import "#home";
+	// ==== AND HOME =====================================================
+	
+	// ==== BREND PAGE =====================================================
+	@import "#brend-page";
+	// ==== AND BREND PAGE =====================================================
+	
+// ==== AND PAGES =====================================================
+
+
+

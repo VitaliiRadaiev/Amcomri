@@ -1,0 +1,147 @@
+.header {
+    background: #fff;
+    position: relative;
+    z-index: 50;
+    &__body {
+        margin: 0 auto;
+        width: 97%;
+        max-width: 1350px;
+        min-height: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: $md3+px) {
+            min-height: 80px; 
+        }
+    }
+
+    &__logo {
+        margin-left: -12px;
+
+        @media (max-width: $md3+px) {
+            margin-right: 20px;
+            &.logo {
+                max-width: 200px;
+            }
+        }
+    }
+
+    &__menu {
+        margin-left: auto;
+        margin-right: 51px;
+
+        @media (max-width: $md2+px) {
+            margin: 0;
+        }
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        transition: all .2s ease;
+
+        & > span {
+            flex: 0 0 20px;
+            height: 20px;
+
+            & img {
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                background: rgba($mainColor2, 0.1);
+            }
+        }
+
+        @media (max-width: $md2+px) {
+            margin-left: auto;
+            margin-right: 50px;
+        }
+
+        @media (max-width: $md4+px) {
+            margin-right: 20px;
+        }
+
+
+
+    }
+
+    &__burger {
+        padding-top: 6px;
+        @media (min-width: 992px) {
+            display: none;
+        }
+    }
+}
+
+
+
+.menu {
+    @media (max-width: $md2+px) {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0px 7px 10px 0px rgba($mainColor2, 0.1);
+        padding: 10px 15px 20px;
+        display: none;
+    }
+
+    @media (min-width: 992px) {
+        display: block !important;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        @media (max-width: $md2+px) {
+            display: block;
+            text-align: center;
+        }
+
+        & > li {
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+
+            &.current-menu-item {
+                & .menu__link {
+                    color: $mainColor2;
+                }
+            }
+
+            @media (max-width: $md2+px) {
+                margin-bottom: 10px;
+                margin-right: 0 !important;
+            }
+        }
+    }
+
+    &__link {
+        color: $mainColor;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.428em;
+        transition: all .2s ease;
+        padding: 5px;
+
+        @media (max-width: $md2+px) {
+           font-size: 18px;
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                color: $mainColor2;
+                background: rgba($mainColor2, 0.1);
+            }
+        }
+    }
+}
