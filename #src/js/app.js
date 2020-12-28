@@ -72,6 +72,10 @@ $(document).ready(function () {
 
 	// ==== blocks =====================================================
 	@@include('##slider.js');
+	@@include('##promo-slider.js');
+	@@include('##preview-block.js');
+	@@include('##slider-text.js');
+	@@include('##latest-news.js');
 	// ==== AND blocks =====================================================
 
 });

@@ -1,15 +1,24 @@
-@include font("DIN", "DINPro-Black", "900", "normal");
+@include font("DIN", "DIN-Black", "900", "normal");
+@include font("DIN", "DINAlternate-Regular", "400", "normal");
+//@include font("DIN", "DINBlackAlternate", "900", "normal");
+@include font("DIN", "DINBold", "700", "normal");
+//@include font("DINLight", "DINLight", "300", "normal");
+@include font("DIN", "DINLightAlternate", "300", "normal");
+//@include font("DINMedium", "DINMedium", "500", "normal");
+@include font("DIN", "DINMediumAlternate", "500", "normal");
+
+//@include font("DIN", "DINPro-Black", "900", "normal");
 // @include font("DINPro-BlackItalic", "DINPro-BlackItalic", "400", "normal");
 // @include font("DINPro-BoldItalic", "DINPro-BoldItalic", "400", "normal");
 // @include font("DINPro-CondensedBlack", "DINPro-CondensedBlack", "400", "normal");
-@include font("DIN", "DINPro-Bold", "700", "normal");
+//@include font("DIN", "DINPro-Bold", "700", "normal");
 // @include font("DINPro-CondensedBold", "DINPro-CondensedBold", "400", "normal");
 // @include font("DINPro-CondensedBoldItalic", "DINPro-CondensedBoldItalic", "400", "normal");
 // @include font("DINPro-CondensedBlackItalic", "DINPro-CondensedBlackItalic", "400", "normal");
 // @include font("DINPro-CondensedItalic", "DINPro-CondensedItalic", "400", "normal");
 // @include font("DINPro-CondensedLightItalic", "DINPro-CondensedLightItalic", "400", "normal");
 // @include font("DINPro-CondensedLight", "DINPro-CondensedLight", "400", "normal");
-// @include font("DINPro-CondensedMedium", "DINPro-CondensedMedium", "400", "normal");
+//@include font("DIN", "DINPro-CondensedMedium", "500", "normal");
 // @include font("DINPro-CondensedMediumItalic", "DINPro-CondensedMediumItalic", "400", "normal");
 // @include font("DINPro-CondensedRegular", "DINPro-CondensedRegular", "400", "normal");
 // @include font("DINPro-Italic", "DINPro-Italic", "400", "normal");

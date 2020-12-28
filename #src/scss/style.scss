@@ -155,16 +155,28 @@ img {
 
 
 .wrapper {
-	width: 100%;
 	min-height: 100%;
+	width: 100%;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
 	&.loaded {
 	}
+}
+
+.page {
+	flex: 1 1 auto;
 }
 
 
 .container {
 	max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.container_large {
+	max-width: 1330px;
 	margin: 0 auto;
 	padding: 0 15px;
 }
@@ -193,12 +205,26 @@ img {
 
 // === title ========================================================================
 .title-1 {
+	color: #ffffff;
+	font-family: $titleFontFamily;
+	font-size: 70px;
+	font-weight: 900;
+	line-height: 1.114em;
+	text-transform: uppercase;
 
+	@media (max-width: $md3+px) {
+		font-size: 48px;
+	}
+
+	@media (max-width: $md4+px) {
+		font-size: 28px;
+	}
 }
+
 .title-2 {
 	font-family: $titleFontFamily;
 	font-size: 50px;
-	font-weight: 700;
+	font-weight: 900;
 	line-height: 1.3em;
 	text-transform: uppercase;
 	color: $mainColor;
@@ -214,7 +240,20 @@ img {
 }
 
 .title-3 {
+	font-family: $titleFontFamily;
+	color: $mainColor;
+	font-size: 40px;
+	font-weight: 900;
+	line-height: 1.6em;
+	text-transform: uppercase;
 
+	@media (max-width: $md3+px) {
+		font-size: 34px;
+	}
+
+	@media (max-width: $md4+px) {
+		font-size: 24px;
+	}
 }
 
 .title-4 {
@@ -247,10 +286,16 @@ img {
 	position: relative;
 	color: $mainColor;
 	border: 1px solid $mainColor;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	font-family: $titleFontFamily;
 	transition: all .2s ease;
+	letter-spacing: 0.03em;
+
+	&.blue {
+		color: #fff;
+		background-color: $mainColor;
+	}
 
 	@media (max-width: $md4+px) {
 		font-size: 16px;

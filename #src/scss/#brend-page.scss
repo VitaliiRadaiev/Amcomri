@@ -41,9 +41,7 @@
         margin-bottom: 100px;
     }
 
-    & .swiper-container {
-        
-    }
+
 	& .swiper-slide {
         cursor: grab;
         height: 756px;
@@ -61,8 +59,13 @@
 	& .swiper-pagination  {
         position: static;
         margin-top: 31px;
+	}
+}
+
+
+.pagination-style {
+    & .swiper-pagination  {
 		width: 100%;
-       // transform: translateX(-50%);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -74,7 +77,6 @@
             max-width: 50px;
 			z-index: 5;
 			opacity: 1;
-			//padding: 2.5rem 0;
 			background: transparent;
 			margin: 0px 10px !important;
             background-color: #d8d8d8;
@@ -124,6 +126,5 @@
 		}
 	}
 }
-
 
 // == and slider ======================================================================

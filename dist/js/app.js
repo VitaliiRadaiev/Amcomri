@@ -510,10 +510,9 @@ document.addEventListener('keydown', function(e) {
 	// ==== blocks =====================================================
 	{
     let slider = document.querySelectorAll('.slider');
-    console.log('test')
+
 	if(slider.length>0) {
 		slider.forEach(item => {
-            console.log(item)
 			var mySwiper = new Swiper(item.querySelector('.swiper-container'), {
 			slidesPerView:1,
 			effect: 'fade',
@@ -555,6 +554,245 @@ document.addEventListener('keydown', function(e) {
 		})
 	}
 };
+	{
+    let promoSlider = document.querySelector('.promo-slider');
+    if (promoSlider) {
+        let tpromoSliderBg;
+            tpromoSliderBg = new Swiper(promoSlider.querySelector('.promo-slider__bg.swiper-container'), { 
+            speed: 800,
+            effect: 'fade',
+            loop: true,
+        });
+
+        let promoSliderText;
+            promoSliderText = new Swiper(promoSlider.querySelector('.promo-slider__column-big.swiper-container'), {
+            spaceBetween: 40,
+            //effect: 'fade',
+            loop: true,
+            speed: 800,
+            navigation: {
+                nextEl: promoSlider.querySelector('.slider-btn.btn-next'),
+                prevEl: promoSlider.querySelector('.slider-btn.btn-prev'),
+            },
+            preloadImages: false,
+            autoplay: {
+                delay: 5000,
+            },
+        });
+
+        promoSliderText.controller.control = tpromoSliderBg;
+    }
+
+}
+;
+	let previewBlock = document.querySelector('.preview-block');
+if(previewBlock) {
+    let previewText;
+    previewText = new Swiper(previewBlock.querySelector('.preview-block__slider.swiper-container'), {
+        spaceBetween: 0,
+        //effect: 'fade',
+        slidesPerView: 5,
+        centeredSlides: true,
+        loop: true,
+        speed: 800,
+        
+        navigation: {
+            nextEl: previewBlock.querySelector('.slider-btn.btn-next'),
+            prevEl: previewBlock.querySelector('.slider-btn.btn-prev'),
+        },
+        preloadImages: false,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+         autoplay: {
+             delay: 4000,
+                disableOnInteraction: false,
+         },
+       on: {
+        slideChange: function () {
+            if(previewText) {
+ 
+                let bg = previewBlock.querySelector('.preview-block__bg').children;
+                let text = previewBlock.querySelector('.preview-block__text .swiper-wrapper').children;
+            
+                bg[previewText.realIndex].classList.add('_active');
+                text[previewText.realIndex].classList.add('_active');
+                for(let bgEl of bg) {
+                    if(bgEl == bg[previewText.realIndex]) {
+                        continue
+                    }
+                    bgEl.classList.remove('_active');
+                }
+
+                for(let textEl of text) {
+                    if(textEl == text[previewText.realIndex]) {
+                        continue
+                    }
+                    textEl.classList.remove('_active');
+                }
+
+            }
+            
+         
+        },
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                direction: 'horizontal',
+            },
+            992: {
+                slidesPerView: 5,
+                spaceBetween: 0,
+                direction: 'vertical',
+            },
+        },
+    });
+
+    let stop = false;
+    let playPouse = document.querySelector('.preview-block__pouse-play');
+    let img = document.querySelector('.preview-block__pouse-play img');
+    let srcPause = img.src;
+    let srcPlay = srcPause.replace('pause.svg', 'play.svg')
+    
+    playPouse.addEventListener('click', () => {
+        if(!stop) {
+            stop =  previewText.autoplay.stop(); 
+            img.src = srcPlay;
+        } else {
+            previewText.autoplay.start();
+            stop = false;
+            img.src = srcPause;
+        }
+       
+    })    
+
+
+    if(document.documentElement.clientWidth < 992) {
+        let text = previewBlock.querySelector('.preview-block__text').children;
+        for(let textEl of text) {
+            console.log(textEl.clientHeight);
+            
+        }
+    }
+
+    let sliderText = previewBlock.querySelector('.preview-block__text.swiper-container');
+    let previewText2;
+
+    
+    function mobileSlider() {
+        if(document.documentElement.clientWidth < 992 && sliderText.dataset.mobile == 'false') {
+            previewText2 = new Swiper(sliderText, {
+                slidesPerView: 1,
+                //centeredSlides: true,
+                speed: 800,
+                loop: true,
+            });
+
+            sliderText.dataset.mobile = 'true';
+
+            previewText.controller.control = previewText2;
+            previewText2.controller.control = previewText;
+            //mySwiper.slideNext(0);
+        }
+
+        if(document.documentElement.clientWidth > 991) {
+            sliderText.dataset.mobile = 'false';
+
+            if(sliderText.classList.contains('swiper-container-initialized')) {
+                previewText2.destroy();
+            }
+        }
+    }
+
+    mobileSlider();
+
+    window.addEventListener('resize', () => {
+        mobileSlider();
+    })
+    
+};
+	{
+    let slider = document.querySelectorAll('.text-slider');
+
+	if(slider.length>0) {
+		slider.forEach(item => {
+			var mySwiper = new Swiper(item.querySelector('.swiper-container'), {
+			slidesPerView:1,
+			//loop: true,
+			speed: 600,
+			autoplay: {
+			  delay: 4000,
+			   disableOnInteraction: false,
+			},
+			spaceBetween: 55,
+			pagination: {
+			    el: item.querySelector('.swiper-pagination'),
+			     clickable: true,
+			     renderBullet: function(index, className) {
+			     	return '<div class="' + className + '"> <span class="progress"></span> </div>'
+			     }
+			  },
+			 on: {
+
+			 	slideChangeTransitionStart: function(current) {
+			 		let pagination = item.querySelector('.swiper-pagination');
+			 		let lenght = pagination.children.length;
+			 		
+			 		for(let i = 0; i < lenght; i++) {
+			 			if(i == current.activeIndex) break;
+			 			pagination.children[i].classList.add('isShow');
+			 		}
+
+			 		for(let i = current.activeIndex; i < lenght; i++) {
+			 			pagination.children[i].classList.remove('isShow');
+			 			pagination.children[i].firstElementChild.style.transform = 'scaleX(0)';
+			 		}
+			 	}
+			 }, 
+				// scrollbar: {
+				//   el: item.querySelector('.swiper-scrollbar'),
+				// },
+			})
+		})
+	}
+};
+	{
+    let latestNews = document.querySelector('.latest-news');
+    if (latestNews) {
+        let latestNewsSlider;
+            latestNewsSlider = new Swiper(latestNews.querySelector('.latest-news__slider.swiper-container'), { 
+            spaceBetween: 44,
+            speed: 600,
+            navigation: {
+                nextEl: latestNews.querySelector('.slider-btn.btn-next'),
+                prevEl: latestNews.querySelector('.slider-btn.btn-prev'),
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 15,
+                    autoHeight: true,
+                },
+                576: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 34,
+                },
+                1268: {
+                    slidesPerView: 4,
+                    spaceBetween: 44,
+                },
+            },
+        });
+
+    }
+
+}
+;
 	// ==== AND blocks =====================================================
 
 });

@@ -75,3 +75,15 @@
 	-webkit-order: $val;
 	order: $val;
 }
+
+@mixin mb() {
+	@media (max-width: $md2+px) {
+		margin-bottom: $mb991+px;
+	}
+	@media (max-width: $md3+px) {
+		margin-bottom: $mb767+px;
+	}
+	@media (max-width: $md4+px) {
+		margin-bottom: $mb479+px;
+	}
+}
