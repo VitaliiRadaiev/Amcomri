@@ -3208,6 +3208,62 @@ img {
   margin-bottom: 0.52em;
 }
 
+.companies-list {
+  margin-bottom: 160px;
+}
+
+.companies-list__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -25px;
+}
+
+.companies-list__item {
+  padding: 0 25px;
+  margin-bottom: 56px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.333%;
+          flex: 0 1 33.333%;
+  display: block;
+}
+
+.companies-list__item > span {
+  display: block;
+  height: 0;
+  padding-bottom: 83.37%;
+  position: relative;
+  border: 2px solid #979797;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.companies-list__item > span > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.companies-list__item > span > span img {
+  max-width: 230px;
+  width: 100%;
+}
+
 @media (min-width: 320px) {
   .menu__link.is-sub-menu:after {
     font-family: 'icomoon';
@@ -3553,6 +3609,10 @@ img {
     background-color: #006099;
     color: #fff;
   }
+
+  .companies-list__item > span:hover {
+    background-color: rgba(224, 224, 224, 0.6);
+  }
 }
 
 @media (min-width: 992px) and (min-width: 992px) {
@@ -3594,6 +3654,10 @@ img {
 @media (max-width: 991.98px) {
   .select__title {
     font-size: 18px;
+  }
+
+  .hero {
+    margin-bottom: 120px;
   }
 
   .block-col-2 {
@@ -3749,6 +3813,19 @@ img {
   .our-values {
     margin-bottom: 120px;
   }
+
+  .companies-list {
+    margin-bottom: 120px;
+  }
+
+  .companies-list__body {
+    margin: 0 -15px;
+  }
+
+  .companies-list__item {
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -3772,6 +3849,10 @@ img {
 
   .title-3 {
     font-size: 34px;
+  }
+
+  .hero {
+    margin-bottom: 90px;
   }
 
   .hero__body {
@@ -3942,6 +4023,16 @@ img {
   .our-values__item {
     margin-bottom: 55px;
   }
+
+  .companies-list {
+    margin-bottom: 90px;
+  }
+
+  .companies-list__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
 }
 
 @media (max-width: 575px) {
@@ -3995,6 +4086,10 @@ img {
 
   .btn-default {
     font-size: 16px;
+  }
+
+  .hero {
+    margin-bottom: 60px;
   }
 
   .hero__body {
@@ -4102,6 +4197,18 @@ img {
 
   .our-values__item-title {
     font-size: 18px;
+  }
+
+  .companies-list {
+    margin-bottom: 60px;
+  }
+
+  .companies-list__body {
+    margin: 0 -7.5px;
+  }
+
+  .companies-list__item {
+    padding: 0 7.5px;
   }
 }
 

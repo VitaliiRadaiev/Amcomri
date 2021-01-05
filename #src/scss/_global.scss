@@ -2,6 +2,9 @@
     position: relative;
     background: #b4b4b4;
     margin-bottom: 158px;
+
+    @include mb();
+
     &__bg {
         position: absolute;
         top: 0;

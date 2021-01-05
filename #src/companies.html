@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('_head.html',{
+	"title": "Amcomri"
+	})
+	<body>
+		<!-- == WRAPPER ================== -->
+		<div class="wrapper companies">
+			<!-- == TOP LINE ================== -->
+			@@include('_header.html',{})
+			<!-- == // TOP LINE ================== -->
+
+			<!-- == PAGE CONTENT ================== -->
+			<main class="page">
+				@@include('_hero.html',{
+					"bg":['img/photo/companies-bg.jpg'],
+					"suptitle": 'industrial sector',
+					"title": 'automotive',
+					"text": 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor.',
+				})
+
+
+				<section class="text-block container">
+					<h2 class="text-block__title title-2">
+						SPECIALIST COMPANIES
+					</h2>
+					<div class="text-block__text text-content">
+						<p>
+							Every business that we acquire has a proud history. When we become a part of that story, our purpose is to accelerate their performance and ensure long term value. It’s all part of our vision to become a hub for businesses with unique skills or quality manufacturing operations, and improve their fortunes for the better.
+						</p>
+					</div>
+                </section>
+                
+                <section class="companies-list">
+                    <div class="container_large">
+                        <div class="companies-list__body">
+                            <a href="#" class="companies-list__item">
+                                <span>
+                                    <span>
+                                        <img src="img/logo/Fiennes_Classics_Logo@2x.png" alt="logo">
+                                    </span>
+                                </span>
+                            </a>
+                            <a href="#" class="companies-list__item">
+                                <span>
+                                    <span>
+                                        <img src="img/logo/Fiennes_Classics_Logo@2x.png" alt="logo">
+                                    </span>
+                                </span>
+                            </a>
+                            <a href="#" class="companies-list__item">
+                                <span>
+                                    <span>
+                                        <img src="img/logo/Fiennes_Classics_Logo@2x.png" alt="logo">
+                                    </span>
+                                </span>
+                            </a>
+                            <a href="#" class="companies-list__item">
+                                <span>
+                                    <span>
+                                        <img src="img/logo/Fiennes_Classics_Logo@2x.png" alt="logo">
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+			</main>
+			<!-- == // PAGE CONTENT ================== -->
+
+			<!-- == FOOTER ================== -->
+			@@include('_footer.html',{})
+			<!-- == // FOOTER ================== -->
+		</div>
+		<!-- == // WRAPPER ================== -->
+		@@include('_popup.html',{})
+		@@include('_js.html',{})
+	</body>
+</html>
