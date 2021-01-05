@@ -1,0 +1,121 @@
+.about-us {
+
+}
+
+
+.advantages {
+    margin-bottom: 161px;
+    @include mb();
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 566px;
+    background-color: #f2f2f2;
+    padding: 125px 0 100px;
+
+    @media (max-width: $md2+px) {
+        min-height: 450px;
+        padding: 85px 0 60px;
+    }
+
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -25px;
+
+        @media (max-width: $md3+px) {
+            display: block;
+        }
+    }
+
+    &__item {
+        padding: 0 25px;
+        flex: 0 1 33.3333%;
+        margin-bottom: 25px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 33px;
+
+        @media (max-width: $md2+px) {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {   
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1.3em;
+
+        @media (max-width: $md2+px) {
+            font-size: 18px;
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 16px;
+        }
+
+        & > p {
+            margin-bottom: 1.3em;
+        }
+    }
+}
+
+
+
+
+.our-values {
+    margin-bottom: 160px;
+    @include mb();
+
+    &__body {
+        display: flex;
+
+        @media (max-width: $md3+px) {
+            display: block;
+        }
+    }
+
+    &__column-1 {
+        flex: 1 1 auto;
+        max-width: 328px;
+        margin-right: 45px;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+
+        @media (max-width: $md4+px) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__column-2 {
+        flex: 1 1 auto;
+        max-width: 413px;;
+    }
+
+    &__item {
+        margin-bottom: 75px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 55px;
+        }
+    }
+
+    &__item-title {
+        margin-bottom: 0.52em;
+
+        @media (max-width: $md4+px) {
+            font-size: 18px;
+        }
+    }
+
+    &__item-text {
+    }
+}

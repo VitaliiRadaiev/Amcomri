@@ -108,6 +108,8 @@
     justify-content: space-between;
     margin-bottom: 120px; 
 
+    @include mb();
+
     @media (max-width: $md2+px) {
         display: block;
     }
@@ -167,7 +169,21 @@
 
 //== and block-col-2 =====================================
 
+.big-text {
+    color: $mainColor;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1.04em;
+    text-align: left;
 
+    @media (max-width: $md3+px) {
+		font-size: 40px;
+	}
+
+	@media (max-width: $md4+px) {
+		font-size: 27px;
+	}
+}
 
 
 .text-block {

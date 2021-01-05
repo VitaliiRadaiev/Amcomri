@@ -260,9 +260,13 @@ img {
 
 }
 
-.title-5 {
-
-
+.title-5 {	
+	color: #00acd8;
+	font-family: $titleFontFamily;
+	font-size: 25px;
+	font-weight: 700;
+	line-height: 1.64em;
+	text-transform: uppercase;
 }
 
 .suptitle {
@@ -412,6 +416,10 @@ button.btn-default {
 	// ==== NEWS =====================================================
 	@import "#news";
 	// ==== AND NEWS =====================================================
+	
+	// ==== ABOUT US =====================================================
+	@import "#about-us";
+	// ==== AND ABOUT US =====================================================
 	
 // ==== AND PAGES =====================================================
 
