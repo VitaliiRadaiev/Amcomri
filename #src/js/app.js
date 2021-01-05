@@ -32,9 +32,11 @@ $(document).ready(function () {
 	document.body.classList.add('is-load');
 
 	@@include('_function.js');
+	@@include('forms.js');
 	@@include('da.js');
 	@@include('burger.js');
 	@@include('popup.js');
+	
 
 
 	// === Проверка, поддержка браузером формата webp ==================================================================
@@ -69,6 +71,8 @@ $(document).ready(function () {
 		// 	}
 		// }
 		// // ==== AND ADD PADDING-TOP ================================
+		
+		@@include('#header.js');
 
 	// ==== blocks =====================================================
 	@@include('##slider.js');

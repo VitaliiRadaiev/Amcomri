@@ -1,0 +1,141 @@
+.news {
+    & .hero {
+        margin-bottom: 59px;
+    }
+
+    & .hero__text {
+        max-width: 380px;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 89px;
+    }
+
+    &__filter {
+        margin-bottom: 99px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -23px 59px;
+
+        @media (max-width: $md2+px) {
+            margin: 0 -10px 70px;
+        }
+
+        & > li {
+            padding: 0 23px;
+            margin-bottom: 99px;
+            flex: 0 1 33.3333%;
+
+            @media (max-width: $md2+px) {
+                padding: 0 10px;
+            }
+
+            @media (max-width: $md3+px) {
+                flex: 0 1 50%;
+            }
+
+            @media (max-width: $md4+px) {
+                flex: 0 1 100%;
+                margin-bottom: 60px;
+            }
+        }
+    }
+
+    &__btn-wrap {
+        text-align: center;
+        margin-bottom: 118px;
+    }
+
+    &__btn {
+        &.btn-default {
+            &::before {
+                transform: translateY(-50%) rotate(90deg);
+            }
+
+            @media (min-width: 992px) {
+                &:hover {
+                    &:before {
+                        right:2em;
+                        top: 55%;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.filter-news {
+
+    &__row-1 {
+        margin-bottom: 34px;
+    }
+
+    &__nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 10px;
+
+        & > li {
+            margin: 0 2% 2em;
+
+            &.active {
+                & .filter-news__link {
+                    background-color: $mainColor;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &__link {
+        color: $mainColor;
+        font-family: $titleFontFamily;
+        font-size: 1.2em;
+        font-weight: 700;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        min-height: 33px;
+        padding: 0.5em 1.75em;
+        border: 1px solid $mainColor;
+        transition: all .2s ease;
+
+        
+
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: $mainColor;
+                color: #fff;
+            }
+        }
+    }
+
+
+    &__row-2 {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @media (max-width: 575px) {
+            display: block;
+        }
+    }
+
+    &__select-wrap {
+        margin-bottom: 16px;
+        flex: 1 1 auto;
+        max-width: 165px;
+        min-width: 120px;
+    }
+
+    &__select {
+    }
+}
