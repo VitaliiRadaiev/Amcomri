@@ -1,0 +1,127 @@
+.leadersip {
+    & .hero {
+        margin-bottom: 143px;
+        @include mb();
+    }
+}
+
+
+.team {
+    margin-bottom: 174px;
+    @include mb();
+
+    &__body {
+        &.container {
+            max-width: 1145px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 -55px;
+
+        @media (max-width: 1280px) {
+            margin: 0 5px;
+        }
+
+        @media (max-width: $md2+px) {
+            margin: 0 -15px;
+        }
+
+        & > li {
+            padding: 0 55px;
+            flex: 0 1 clamp(280px, 50%, 565px);
+            margin-bottom: 162px;
+
+            @media (max-width: $md2+px) {
+                padding: 0 15px;
+                flex: 0 1 clamp(280px, 50%, 445px);
+                margin-bottom: 60px;
+            }
+
+            @media (max-width: 575px) {
+                flex: 0 1 100%;
+            }
+    
+        }
+    }
+}
+
+
+.card-lead {
+
+    &__img {
+        padding-bottom: 101.5%;
+        margin-bottom: 42px;
+        border: 2px solid rgba(#979797, 0.8);
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__text-wrap {
+        padding: 0 6px;
+    }
+
+    &__name {   
+        color: #818181;
+        font-family: $titleFontFamily;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 0.86em;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            transform: translateY(-50%);
+            left: -75px;
+            height: 53px;
+            width: 53px;
+            display: block;
+            background: url(../img/logo/logo-decor.png) center no-repeat;
+            background-size: contain;
+
+            @media (max-width: $md2+px) {
+                left: 0;
+                top: -30px;
+                height: 40px;
+                width: 40px;
+            }
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 22px;
+            margin-bottom: 4px;
+        }
+    }
+
+    &__position {  
+        color: #000000;
+        font-family: $titleFontFamily;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.73em;
+        text-transform: uppercase;
+        margin-bottom: 45px;
+
+        @media (max-width: $md3+px) {
+            font-size: 12px;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__text {
+        max-width: 370px;
+    }
+}
+.ibg {
+}
+.text-content {
+}

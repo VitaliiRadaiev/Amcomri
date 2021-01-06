@@ -3264,6 +3264,88 @@ img {
   width: 100%;
 }
 
+.leadersip .hero {
+  margin-bottom: 143px;
+}
+
+.team {
+  margin-bottom: 174px;
+}
+
+.team__body.container {
+  max-width: 1145px;
+}
+
+.team__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 -55px;
+}
+
+.team__list > li {
+  padding: 0 55px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 clamp(280px, 50%, 565px);
+          flex: 0 1 clamp(280px, 50%, 565px);
+  margin-bottom: 162px;
+}
+
+.card-lead__img {
+  padding-bottom: 101.5%;
+  margin-bottom: 42px;
+  border: 2px solid rgba(151, 151, 151, 0.8);
+}
+
+.card-lead__text-wrap {
+  padding: 0 6px;
+}
+
+.card-lead__name {
+  color: #818181;
+  font-family: "DIN", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 0.86em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.card-lead__name:before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -75px;
+  height: 53px;
+  width: 53px;
+  display: block;
+  background: url(../img/logo/logo-decor.png) center no-repeat;
+  background-size: contain;
+}
+
+.card-lead__position {
+  color: #000000;
+  font-family: "DIN", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.73em;
+  text-transform: uppercase;
+  margin-bottom: 45px;
+}
+
+.card-lead__text {
+  max-width: 370px;
+}
+
 @media (min-width: 320px) {
   .menu__link.is-sub-menu:after {
     font-family: 'icomoon';
@@ -3637,6 +3719,12 @@ img {
   }
 }
 
+@media (max-width: 1280px) {
+  .team__list {
+    margin: 0 5px;
+  }
+}
+
 @media (max-width: 1267px) {
   .latest-news__control {
     margin-right: 0;
@@ -3825,6 +3913,37 @@ img {
   .companies-list__item {
     padding: 0 15px;
     margin-bottom: 30px;
+  }
+
+  .leadersip .hero {
+    margin-bottom: 120px;
+  }
+
+  .team {
+    margin-bottom: 120px;
+  }
+
+  .team__list {
+    margin: 0 -15px;
+  }
+
+  .team__list > li {
+    padding: 0 15px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 clamp(280px, 50%, 445px);
+            flex: 0 1 clamp(280px, 50%, 445px);
+    margin-bottom: 60px;
+  }
+
+  .card-lead__img {
+    margin-bottom: 60px;
+  }
+
+  .card-lead__name:before {
+    left: 0;
+    top: -30px;
+    height: 40px;
+    width: 40px;
   }
 }
 
@@ -4033,6 +4152,24 @@ img {
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
   }
+
+  .leadersip .hero {
+    margin-bottom: 90px;
+  }
+
+  .team {
+    margin-bottom: 90px;
+  }
+
+  .card-lead__name {
+    font-size: 22px;
+    margin-bottom: 4px;
+  }
+
+  .card-lead__position {
+    font-size: 12px;
+    margin-bottom: 25px;
+  }
 }
 
 @media (max-width: 575px) {
@@ -4068,6 +4205,12 @@ img {
 
   .filter-news__row-2 {
     display: block;
+  }
+
+  .team__list > li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
   }
 }
 
@@ -4209,6 +4352,14 @@ img {
 
   .companies-list__item {
     padding: 0 7.5px;
+  }
+
+  .leadersip .hero {
+    margin-bottom: 60px;
+  }
+
+  .team {
+    margin-bottom: 60px;
   }
 }
 
