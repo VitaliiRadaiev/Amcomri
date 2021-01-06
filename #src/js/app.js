@@ -80,6 +80,7 @@ $(document).ready(function () {
 	@@include('##preview-block.js');
 	@@include('##slider-text.js');
 	@@include('##latest-news.js');
+	@@include('##transaction-types.js');
 	// ==== AND blocks =====================================================
 
 });

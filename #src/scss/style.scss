@@ -269,6 +269,15 @@ img {
 	text-transform: uppercase;
 }
 
+.title-6 {
+	color: #000000;
+	font-family: $titleFontFamily;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.666em;
+	text-transform: uppercase;
+}
+
 .suptitle {
 
 }
@@ -428,6 +437,10 @@ button.btn-default {
 	// ==== LEADERSHIP =====================================================
 	@import "#leadership";	
 	// ==== AND LEADERSHIP =====================================================
+	
+	// ==== WHAT WE DO =====================================================
+	@import "#what-we-do";	
+	// ==== AND WHAT WE DO =====================================================
 	
 // ==== AND PAGES =====================================================
 
