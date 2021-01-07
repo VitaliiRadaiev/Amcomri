@@ -280,7 +280,10 @@ img {
 }
 
 .title-4 {
-
+	font-family: $titleFontFamily;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 1.2em;
 }
 
 .title-5 {	
@@ -315,6 +318,7 @@ img {
 // === btn ========================================================================
 .btn-default {
 	display: inline-flex;
+	align-items: center;
 	font-size: 20px;
 	min-width: 14.25em;
 	min-height: 3.1em;
@@ -370,7 +374,9 @@ img {
 }
 
 button.btn-default {
-	
+	background-color: transparent;
+	font-weight: bold;
+	align-items: center;
 }
 
 // === and btn ========================================================================
@@ -464,6 +470,10 @@ button.btn-default {
 	// ==== WHAT WE DO =====================================================
 	@import "#what-we-do";	
 	// ==== AND WHAT WE DO =====================================================
+	
+	// ==== CONTACT =====================================================
+	@import "#contact";	
+	// ==== AND CONTACT =====================================================
 	
 // ==== AND PAGES =====================================================
 

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('_head.html',{
+	"title": "Amcomri"
+	})
+	<body>
+		<!-- == WRAPPER ================== -->
+		<div class="wrapper contact">
+			<!-- == TOP LINE ================== -->
+			@@include('_header.html',{})
+			<!-- == // TOP LINE ================== -->
+
+			<!-- == PAGE CONTENT ================== -->
+			<main class="page">
+				@@include('_hero.html',{
+					"bg":['img/photo/contact-bg-1.png', 'img/photo/contact-bg-2.jpg'],
+					"suptitle": '',
+					"title": 'get in touch',
+					"text": 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor.',
+                })
+                
+                <section class="contact-info">
+                    <div class="container">
+                        <h2 class="contact-info__title title-2">
+                            CONTACT INFORMATION
+                        </h2>
+                        <div class="contact-info__tabel">
+                            <div class="contact-info__tr">
+                                <div class="contact-info__td">General Enquiries:</div>
+                                <div class="contact-info__td">01234 567 9890</div>
+                            </div>
+                            <div class="contact-info__tr">
+                                <div class="contact-info__td">Press Enquiries:</div>
+                                <div class="contact-info__td">01234 567 890</div>
+                            </div>
+                            <div class="contact-info__tr">
+                                <div class="contact-info__td">General Enquiries:</div>
+                                <div class="contact-info__td">info@amcomri.com</div>
+                            </div>
+                            <div class="contact-info__tr">
+                                <div class="contact-info__td">Address details:</div>
+                                <div class="contact-info__td">
+                                    Amcomri Group Ltd,
+                                    80 New Bond Street,
+                                    WS1 1SB
+                                </div>
+                            </div>
+                            <div class="contact-info__tr">
+                                <div class="contact-info__td">Map & Directions:</div>
+                                <div class="contact-info__td">Get a detailed map</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <form action="#" class="contact-form">
+                    <div class="container">
+                        <h4 class="contact-form__title title-4">
+                            Contact Form
+                        </h4>
+                        <div class="contact-form__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer.
+                        </div>
+                        <div class="contact-form__inner">
+                            <div class="contact-form__input-wrap">
+                                <input type="text" class="input" placeholder="Name">
+                            </div>
+                            <div class="contact-form__input-wrap">
+                                <input type="text" class="input" placeholder="Email Address">
+                            </div>
+                            <div class="contact-form__input-wrap">
+                                <input type="text" class="input" placeholder="Company Name">
+                            </div>
+                            <div class="contact-form__input-wrap">
+                                <input type="text" class="input" placeholder="Position">
+                            </div>
+                        </div>
+                        <div class="contact-form__textarea-wrap">
+                            <textarea class="textarea" placeholder="Message"></textarea>
+                        </div>
+                        <div class="contact-form__submit-wrap">
+                            <button type="submit" class="btn-default"><span>sumbit</span></button>
+                        </div>
+                    </div>
+                </form>
+
+			</main>
+			<!-- == // PAGE CONTENT ================== -->
+
+			<!-- == FOOTER ================== -->
+			@@include('_footer.html',{})
+			<!-- == // FOOTER ================== -->
+		</div>
+		<!-- == // WRAPPER ================== -->
+		@@include('_popup.html',{})
+		@@include('_js.html',{})
+	</body>
+</html>
