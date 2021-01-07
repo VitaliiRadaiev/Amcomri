@@ -2,6 +2,11 @@
     background: #fff;
     position: relative;
     z-index: 50;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
     &__body {
         margin: 0 auto;
         width: 97%;
@@ -18,6 +23,8 @@
 
     &__logo {
         margin-left: -12px;
+        position: relative;
+        z-index: 2;
 
         @media (max-width: $md3+px) {
             margin-right: 20px;
@@ -82,6 +89,8 @@
 
 
 .menu {
+    position: relative;
+    z-index: 1;
     @media (max-width: $md2+px) {
         position: absolute;
         top: 100%;
@@ -114,6 +123,7 @@
         }
 
         & > li {
+            position: relative;
 
             &:not(:last-child) {
                 margin-right: 20px;
@@ -123,6 +133,45 @@
                 & .menu__link {
                     color: $mainColor2;
                 }
+            }
+
+            &._active {
+                & .menu__triangle {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                & .sub-menu {
+                    opacity: 1;
+                    visibility: visible;
+                } 
+            }
+
+            &.is-sub-menu {
+                position: relative;
+
+                & .menu__link {
+                    @media (min-width: 320px) {
+    
+                        &:after {
+                            font-family: 'icomoon';
+                            content: "\e904";
+                            transform: rotate(90deg);
+                            display: inline-block;
+                            margin-left: 10px;
+                            font-size: 0.7em;
+                        }
+                    }
+        
+                    @media (min-width: 992px) {
+                        &:after {
+                            display: none;
+                        }
+        
+                    }
+        
+                }
+
+    
             }
 
             @media (max-width: $md2+px) {
@@ -162,52 +211,51 @@
             }
         }
 
-        &.is-sub-menu {
-            position: relative;
 
-            @media (min-width: 320px) {
+    }
 
-                &:after {
-                    font-family: 'icomoon';
-                    content: "\e904";
-                    transform: rotate(90deg);
-                    display: inline-block;
-                    margin-left: 10px;
-                    font-size: 0.7em;
-                }
-            }
+    &__triangle {
+        position: absolute;
+        top: 38px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 5;
+        height: 26px;
+        display: flex;
+        opacity: 0;
+        visibility: hidden;
+        //transition: opacity .2s ease;
 
-            @media (min-width: 992px) {
-                &:after {
-                    display: none;
-                }
-
-
-                &:before {
-                    position: absolute;
-                    content: '';
-                    top: 160%;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    background: rgba(#000, 0.7);
-                    width: 30px;
-                    height: 26px;
-                    opacity: 0;
-                    pointer-events: none;
-                    transition: all .3s ease;
-                    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
-                }
-
-                &._active {
-                    &:before {
-                        opacity: 1;
-                    }
-                }
-            }
-
-
+        @media (max-width: $md2+px) {
+            display: none;
         }
 
+        &:before {
+            content: '';
+            height: 100%;
+            width: 2000px;
+            background-color: #fff;
+            display: inline-block;
+            clip-path: polygon(0% 0%, 100% 0%, 99.2% 100%, 0% 100%);
+            transform: translateX(15px);
+        }
+
+        &::after {
+            content: '';
+            height: 100%;
+            width: 2000px;
+            background-color: #fff;
+            display: inline-block;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0.8% 100%);
+            transform: translateX(-15px);
+        }
+        & > span {
+            display: inline-block;
+            width: 30px;
+            height: 100%;
+            pointer-events: none;
+            //clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+        }
     }
 }
 
@@ -229,20 +277,46 @@
 
 @media (min-width: 992px) {
     .sub-menu {
-        position: absolute;
-        top: 100%;
-        width: 100%;
-        background: rgba(#000, 0.6);
-        min-height: 600px;
-        display: flex;
-        justify-content: center;
-        padding-top: 55px;
-        transition: all .4s ease;
+        position: fixed;
+        top: 84px;
+        left: 0;
+        width: 100vw;
+        display: block;
         opacity: 0;
         visibility: hidden;
-        &._active {
-            opacity: 1;
-            visibility: visible;
+        transition: all .4s ease;
+
+        &__bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+
+            &:before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                background: rgba(#000, 0.7);
+            }
+            
+        }
+
+        &__body {
+            position: relative;
+            z-index: 2;
+            min-height: 762px;
+            display: flex;
+            justify-content: center;
+            padding-top: 55px;
+            //transition: all .4s ease;
+            // opacity: 0;
+            // visibility: hidden;
         }
     
         &__close {
@@ -286,6 +360,12 @@
             border-left: 2px solid #fff;
             min-height: 255px;
             align-self: flex-start;
+
+            &:last-child {
+                & .sub-menu__title {
+                    margin-bottom: 13px;
+                }
+            }
         }
     
         &__title {
@@ -296,6 +376,16 @@
             line-height: 1.428em;
             text-transform: uppercase;
             margin-bottom: 13px;
+
+            & > a {
+                color: #fff;
+
+                @media (min-width: 992px) {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
 
             &:after {
                 display: none;
@@ -357,6 +447,11 @@
         &__item {
             padding-left: 15px;
 
+            &:last-child {
+                & .sub-menu__title {
+                    margin-bottom: 0;
+                }
+            }
         }
     
         &__title {

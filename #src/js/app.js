@@ -62,15 +62,19 @@ $(document).ready(function () {
 	// === // Проверка, поддержка браузером формата webp ==================================================================
 
 
-		// // ==== ADD PADDING-TOP ================================
-		// {
-		// 	let wrapper = document.querySelector('.wrapper');
-		// 	if (wrapper) {
-		// 		let headerHeight = document.querySelector('.top-line').clientHeight;
-		// 			wrapper.style.paddingTop = headerHeight + 'px';
-		// 	}
-		// }
-		// // ==== AND ADD PADDING-TOP ================================
+		// ==== ADD PADDING-TOP ================================
+		{
+			let wrapper = document.querySelector('.wrapper');
+			if (wrapper) {
+				let header = document.querySelector('.header');
+				if(header) {
+					let headerHeight = header.clientHeight;
+					wrapper.style.paddingTop = headerHeight + 'px';
+				}
+				
+			}
+		}
+		// ==== AND ADD PADDING-TOP ================================
 		
 		@@include('#header.js');
 
