@@ -1,0 +1,233 @@
+.individual-post {
+    & .hero {
+        margin-bottom: 121px;
+
+        @include mb();
+    }
+}
+
+
+.individual-post-content {
+    margin-bottom: 75px;
+    @media (max-width: $md3+px) {
+        margin-bottom: 45px;
+    }
+
+    &__body {
+        margin: 0 auto;
+        max-width: 1350px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15px 0 120px;
+
+        @media (max-width: $md2+px) {
+            padding-left: 15px;
+        }
+
+        @media (max-width: $md3+px) {
+            display: block;
+        }
+        
+    }
+
+    &__column-1 {
+        flex: 1 1 auto;
+        margin-right: 60px;
+        max-width: 750px;
+
+        @media (max-width: $md2+px) {
+            margin-right: 40px;
+        }
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 60px;
+            margin-right: 0;
+        }
+    }
+    &__column-2 {
+        flex: 0 0 290px;
+        min-height: 520px;
+        border-left: 1px solid rgba(91, 91, 91, 0.6);
+        padding-left: 45px;
+        padding-top: 7px;
+        align-self: flex-start;
+
+
+        @media (max-width: $md2+px) {
+           padding-left: 25px;
+           flex: 0 0 250;
+        }
+
+        @media (max-width: $md3+px) {
+            min-height: auto;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        & .link-share {
+            margin-right: 15px;
+            margin-bottom: 15px;
+        }
+
+        & .btn-default {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+    }
+
+}
+
+
+
+
+.link-share {
+    display: inline-flex;
+    color: #006099;
+    font-family: $titleFontFamily;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px;
+    transition: all .2s ease;
+
+    @media (min-width: 992px) {
+        &:hover {
+            background-color: rgba(#000, 0.1);
+        }
+    }
+
+    & > span {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 18px;
+        width: 18px;
+        height: 18px;
+        margin-right: 9px;
+        transform: rotate(180deg);
+        & img {
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+.recent-post {
+    margin-bottom: 60px;
+    max-width: 420px;
+    &__title {
+        color: #000000;
+        font-family: $titleFontFamily;
+        font-size: 18px;
+        line-height: 1.555em;
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        & > li {
+            margin-bottom: 18px;
+            & a {    
+                display: inline-block;   
+                color: #000000;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 1.75em;
+                transition: all .2s ease;
+
+                @media (min-width: 992px) {
+                    &:hover {
+                        color: $mainColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+.related-articles {
+    margin-bottom: -22px;
+
+    @media (max-width: $md3+px) {
+        margin-bottom: 0;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -19px;
+
+        @media (max-width: $md2+px) {
+            margin: 0 -10px;
+        }
+
+        & > li {
+            flex: 0 1 33.333%;
+            padding: 0 19px;
+            margin-bottom: 99px;
+
+            @media (max-width: $md2+px) {
+                padding: 0 10px;
+            }
+
+            @media (max-width: $md3+px) {
+                flex: 0 1 50%;
+            }
+
+            @media (max-width: $md4+px) {
+                flex: 0 1 100%;
+                margin-bottom: 60px;
+            }
+        }
+
+        & .card-news {
+            & .card-news__title {
+                margin-bottom: 5px;
+            }
+
+            & .card-news__text {
+                margin-bottom: 21px;
+            }
+        }
+    }
+}
+
+
+.card-news {
+
+    &__img {
+    }
+
+    &__text-wrap {
+    }
+
+    &__title {
+    }
+
+    &__text {
+    }
+
+    &__bottom {
+    }
+
+    &__added {
+    }
+
+    &__date {
+    }
+}
+

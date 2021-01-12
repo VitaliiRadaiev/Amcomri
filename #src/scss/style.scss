@@ -284,6 +284,7 @@ img {
 	font-size: 30px;
 	font-weight: 700;
 	line-height: 1.2em;
+	text-transform: uppercase;
 }
 
 .title-5 {	
@@ -331,6 +332,13 @@ img {
 	font-family: $titleFontFamily;
 	transition: all .2s ease;
 	letter-spacing: 0.03em;
+
+	&.simple {
+		padding-right: 0;
+		&:before {
+			display: none;
+		}
+	}
 
 	&.blue {
 		color: #fff;
@@ -408,7 +416,11 @@ button.btn-default {
 	& h4 {}
 
 	& h5 {
-
+		font-family: $mainFontFamily;
+		font-size: 15px;
+		font-weight: 700;
+		line-height: 1.1em;
+		margin-bottom: 1.6em;
 	}
 	& h6 {}
 
@@ -417,6 +429,10 @@ button.btn-default {
 		font-weight: 400;
 		line-height: 1.8em;
 		margin-bottom: 1.66em;
+
+		& ~ h5 {
+			margin-top: 2.8em;
+		}
 	}
 
 	& ul {
@@ -425,7 +441,19 @@ button.btn-default {
 
 	& ol {}
 
-	& figure {}
+	& figure {
+		display: block;
+		margin-bottom: 110px;
+		margin-top: 57px;
+
+		@media (max-width: $md3+px) {
+			margin-bottom: 60px;
+			margin-top: 47px;
+		}
+		& img {
+			width: 100%;
+		}
+	}
 
 }
 // === and TEXT CONTETN BLOCK ========================================================================
@@ -454,6 +482,10 @@ button.btn-default {
 	// ==== NEWS =====================================================
 	@import "#news";
 	// ==== AND NEWS =====================================================
+	
+	// ==== INDIVIDUAL POST =====================================================
+	@import "#individual-post";
+	// ==== AND INDIVIDUAL POST =====================================================
 	
 	// ==== ABOUT US =====================================================
 	@import "#about-us";
