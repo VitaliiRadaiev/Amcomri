@@ -2171,7 +2171,7 @@ hr {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 120px;
+  margin-bottom: 100px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
