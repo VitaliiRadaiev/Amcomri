@@ -1836,6 +1836,15 @@ img {
   width: 100%;
 }
 
+.brend-logo {
+  max-width: 287px;
+  margin-bottom: 70px;
+}
+
+.brend-logo img {
+  width: 100%;
+}
+
 .title-1 {
   color: #ffffff;
   font-family: "DIN", sans-serif;
@@ -2163,6 +2172,20 @@ hr {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 120px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.block-col-2 .brend-logo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+  max-width: none;
+}
+
+.block-col-2 .brend-logo > a {
+  display: inline-block;
+  max-width: 287px;
 }
 
 .block-col-2 .column-1 {
@@ -2411,6 +2434,27 @@ hr {
   height: auto;
   width: auto;
   position: static;
+}
+
+.citation__text {
+  color: #006099;
+  font-size: 30px;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 1em;
+}
+
+.citation__text p {
+  margin-bottom: 1.3em;
+}
+
+.citation__name {
+  color: #00acd8;
+  font-family: "DIN", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.2em;
 }
 
 .header {
@@ -3099,6 +3143,17 @@ hr {
 
 .latest-news__control .btn-prev {
   margin-right: 22px;
+}
+
+.brend-page .block-col-2 .column-1 {
+  margin-bottom: 60px;
+}
+
+.brend-page .block-col-2 .column-2 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+  max-width: 425px;
 }
 
 .list-company-info {
@@ -4984,6 +5039,10 @@ hr {
   .follow-us__link > span {
     width: 28px;
     height: 28px;
+  }
+
+  .citation__text {
+    font-size: 22px;
   }
 
   .header__body {

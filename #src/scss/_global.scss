@@ -211,6 +211,7 @@ hr {
     width: 87%;
     justify-content: space-between;
     margin-bottom: 120px; 
+    flex-wrap: wrap;
 
     @include mb();
 
@@ -220,6 +221,16 @@ hr {
 
     @media (max-width: $md3+px) {
         width: 100%;
+    }
+
+    & .brend-logo {
+        flex: 0 1 100%;
+        max-width: none;
+
+        & > a {
+            display: inline-block;
+            max-width: 287px;
+        }
     }
 
     & .column-1 {
@@ -501,5 +512,44 @@ hr {
                 position: static;
             }
         }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.citation {
+
+    &__text { 
+        color: $mainColor;
+        font-size: 30px;
+        font-weight: 300;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 1em;
+
+        @media (max-width: $md3+px) {
+            font-size: 22px;
+        }
+
+        & p {
+            margin-bottom: 1.3em;
+        }
+    }
+
+    &__name {     
+        color: #00acd8;
+        font-family:$titleFontFamily;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 1.2em;
     }
 }

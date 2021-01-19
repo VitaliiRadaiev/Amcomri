@@ -1,3 +1,15 @@
+.brend-page {
+	& .block-col-2 {
+			& .column-1 {
+				margin-bottom: 60px;
+			}
+			& .column-2 {
+				flex: 0 1 100%;
+				max-width: 425px;
+			}
+	}
+}
+
 .list-company-info {
     margin-top: 2px;
     & > li {
