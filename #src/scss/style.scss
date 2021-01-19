@@ -94,7 +94,7 @@ body {
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	color: $textColor;
-	font-size: 1.2rem;
+	font-size: 1.4rem;
 
 	opacity: 0;
 	transition: opacity .8s ease;
@@ -290,7 +290,7 @@ img {
 .title-5 {	
 	color: #00acd8;
 	font-family: $titleFontFamily;
-	font-size: 25px;
+	font-size: 24px;
 	font-weight: 700;
 	line-height: 1.64em;
 	text-transform: uppercase;
@@ -404,7 +404,7 @@ button.btn-default {
 
 // === TEXT CONTETN BLOCK ========================================================================
 .text-content {
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 400;
 	line-height: 1.74em;
 
@@ -425,7 +425,7 @@ button.btn-default {
 	& h6 {}
 
 	& p {
-		font-size: 12px;
+		font-size: 14px;
 		font-weight: 400;
 		line-height: 1.8em;
 		margin-bottom: 1.66em;

@@ -1,5 +1,13 @@
 var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
 
+// ==== hero block add class if two bg img =====================================================
+	let heroBg = document.querySelector('.hero__bg');
+	if(heroBg) {
+		if(heroBg.children.length >= 2) {
+			heroBg.classList.add('_two-img');
+		}
+	}
+// ==== // hero block add class if two bg img  =====================================================
 
 
 // === lazy load ==================================================================
@@ -78,6 +86,7 @@ $(document).ready(function () {
 		
 		@@include('#header.js');
 
+
 	// ==== blocks =====================================================
 	@@include('##slider.js');
 	@@include('##promo-slider.js');
@@ -85,6 +94,7 @@ $(document).ready(function () {
 	@@include('##slider-text.js');
 	@@include('##latest-news.js');
 	@@include('##transaction-types.js');
+	@@include('scrollAnimation.js');
 	// ==== AND blocks =====================================================
 
 });

@@ -7,6 +7,7 @@
     left: 0;
     width: 100%;
     box-shadow: 0 3px 10px 0 rgba(#000, 0.2);
+    transition: all .4s ease;
 
     &__body {
         margin: 0 auto;
@@ -144,6 +145,7 @@
                 & .sub-menu {
                     opacity: 1;
                     visibility: visible;
+                    transition: all .4s ease;
                 } 
             }
 
@@ -207,8 +209,8 @@
 
         @media (min-width: 992px) {
             &:hover {
-                color: $mainColor2;
-                background: rgba($mainColor2, 0.1);
+                color: #fff !important;
+                background: $mainColor;
             }
         }
 
@@ -225,7 +227,7 @@
         display: flex;
         opacity: 0;
         visibility: hidden;
-        //transition: opacity .2s ease;
+        //transition: opacity .2s ease 0.4s;
 
         @media (max-width: $md2+px) {
             display: none;
@@ -285,7 +287,6 @@
         display: block;
         opacity: 0;
         visibility: hidden;
-        transition: all .4s ease;
 
         &__bg {
             position: absolute;
@@ -311,10 +312,11 @@
         &__body {
             position: relative;
             z-index: 2;
-            min-height: 762px;
+            min-height: 562px;
             display: flex;
             justify-content: center;
-            padding-top: 55px;
+            padding-top: 75px;
+            padding-bottom: 50px;
             //transition: all .4s ease;
             // opacity: 0;
             // visibility: hidden;

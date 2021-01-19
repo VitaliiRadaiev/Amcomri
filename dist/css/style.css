@@ -1705,7 +1705,7 @@ body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   color: #000;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   opacity: 0;
   -webkit-transition: opacity .8s ease;
   -o-transition: opacity .8s ease;
@@ -1875,7 +1875,7 @@ img {
 .title-5 {
   color: #00acd8;
   font-family: "DIN", sans-serif;
-  font-size: 25px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 1.64em;
   text-transform: uppercase;
@@ -1967,7 +1967,7 @@ button.btn-default {
 }
 
 .text-content {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.74em;
 }
@@ -1981,7 +1981,7 @@ button.btn-default {
 }
 
 .text-content p {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.8em;
   margin-bottom: 1.66em;
@@ -2026,8 +2026,37 @@ hr {
 
 .hero {
   position: relative;
-  background: #b4b4b4;
   margin-bottom: 158px;
+}
+
+.hero._anim-items .hero__bg._two-img .hero__bg-item {
+  -webkit-transition: all .6s ease;
+  -o-transition: all .6s ease;
+  transition: all .6s ease;
+}
+
+.hero._anim-items .hero__bg._two-img .hero__bg-item:first-child {
+  -webkit-transform: translateX(-10%);
+      -ms-transform: translateX(-10%);
+          transform: translateX(-10%);
+}
+
+.hero._anim-items .hero__bg._two-img .hero__bg-item:last-child {
+  -webkit-transform: translateX(10%);
+      -ms-transform: translateX(10%);
+          transform: translateX(10%);
+}
+
+.hero._anim-items._active .hero__bg._two-img .hero__bg-item:first-child {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.hero._anim-items._active .hero__bg._two-img .hero__bg-item:last-child {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 .hero_post .hero__title {
@@ -2052,7 +2081,14 @@ hr {
   display: flex;
 }
 
-.hero__bg:before {
+.hero__bg-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  position: relative;
+}
+
+.hero__bg-item:before {
   position: absolute;
   content: '';
   top: 0;
@@ -2061,12 +2097,6 @@ hr {
   height: 100%;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.2);
-}
-
-.hero__bg-item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
 }
 
 .hero__body {
@@ -2225,7 +2255,7 @@ hr {
 
 .card-news__text {
   color: #000000;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.75em;
   margin-bottom: 45px;
@@ -2393,6 +2423,9 @@ hr {
   width: 100%;
   -webkit-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
 }
 
 .header__body {
@@ -2489,6 +2522,9 @@ hr {
 .menu__list > li._active .sub-menu {
   opacity: 1;
   visibility: visible;
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
 }
 
 .menu__list > li.is-sub-menu {
@@ -3433,7 +3469,7 @@ hr {
 .recent-post__list > li a {
   display: inline-block;
   color: #000000;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.75em;
   -webkit-transition: all .2s ease;
@@ -3617,10 +3653,6 @@ hr {
 
 .leadersip .hero {
   margin-bottom: 143px;
-}
-
-.team {
-  margin-bottom: 174px;
 }
 
 .team__body.container {
@@ -3847,57 +3879,62 @@ hr {
 }
 
 .our-approach {
-  margin-bottom: 73px;
+  margin-bottom: 150px;
 }
 
 .our-approach__title {
   margin-bottom: 76px;
+  max-width: 950px;
 }
 
 .our-approach__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 0 -20px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  max-width: 950px;
 }
 
 .our-approach__list > li {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
-  padding: 0 20px;
-  margin-bottom: 73px;
+  padding-bottom: 20px;
 }
 
-.card-approach {
-  padding-left: 20%;
+.our-approach__list > li:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  margin-bottom: 40px;
 }
 
 .card-approach__title {
-  max-width: 376px;
   margin-bottom: 26px;
   position: relative;
+  padding-right: 30%;
+  cursor: pointer;
+}
+
+.card-approach__title.title-5 {
+  color: #000;
+}
+
+.card-approach__title._active:before {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .card-approach__title:before {
   position: absolute;
   content: '';
   top: -10px;
-  left: -81px;
+  right: 127px;
   height: 55px;
   width: 55px;
   display: block;
   background: url(../img/logo/logo-decor@2x.png) center no-repeat;
   background-size: contain;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
 }
 
 .card-approach__list {
-  max-width: 355px;
+  display: none;
+  margin-bottom: 20px;
 }
 
 .card-approach__list > li {
@@ -3906,8 +3943,11 @@ hr {
   font-size: 20px;
   font-weight: 400;
   line-height: 1.3em;
-  margin-bottom: 25px;
   color: #000;
+}
+
+.card-approach__list > li:not(:last-child) {
+  margin-bottom: 25px;
 }
 
 .card-approach__list > li:before {
@@ -4234,18 +4274,6 @@ hr {
   }
 }
 
-@media (min-width: 480px) {
-  .our-approach__list > li:nth-child(odd) .card-approach {
-    padding-left: 20%;
-  }
-}
-
-@media (min-width: 768px) {
-  .our-approach__list > li:nth-child(odd) .card-approach {
-    padding-left: 30%;
-  }
-}
-
 @media (min-width: 992px) {
   .select__option:hover {
     background: rgba(0, 96, 153, 0.06);
@@ -4298,8 +4326,8 @@ hr {
   }
 
   .menu__link:hover {
-    color: #662d91;
-    background: rgba(102, 45, 145, 0.1);
+    color: #fff !important;
+    background: #006099;
   }
 
   .sub-menu {
@@ -4310,9 +4338,6 @@ hr {
     display: block;
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: all .4s ease;
-    -o-transition: all .4s ease;
-    transition: all .4s ease;
   }
 
   .sub-menu__bg {
@@ -4338,14 +4363,15 @@ hr {
   .sub-menu__body {
     position: relative;
     z-index: 2;
-    min-height: 762px;
+    min-height: 562px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-top: 55px;
+    padding-top: 75px;
+    padding-bottom: 50px;
   }
 
   .sub-menu__close {
@@ -4805,10 +4831,6 @@ hr {
     margin-bottom: 120px;
   }
 
-  .team {
-    margin-bottom: 120px;
-  }
-
   .team__list {
     margin: 0 -15px;
   }
@@ -4838,6 +4860,18 @@ hr {
 
   .transaction-types {
     margin-bottom: 120px;
+  }
+
+  .our-approach {
+    margin-bottom: 120px;
+  }
+
+  .card-approach__title {
+    padding-right: 100px;
+  }
+
+  .card-approach__title:before {
+    right: 0;
   }
 
   .partnership {
@@ -5120,10 +5154,6 @@ hr {
     margin-bottom: 90px;
   }
 
-  .team {
-    margin-bottom: 90px;
-  }
-
   .card-lead__name {
     font-size: 22px;
     margin-bottom: 4px;
@@ -5162,11 +5192,25 @@ hr {
     font-size: 16px;
   }
 
-  .our-approach__list > li {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 100%;
-            flex: 0 1 100%;
-    margin-bottom: 60px;
+  .our-approach {
+    margin-bottom: 90px;
+  }
+
+  .our-approach__list > li:not(:last-child) {
+    margin-bottom: 35px;
+  }
+
+  .card-approach__title {
+    margin-bottom: 10px;
+  }
+
+  .card-approach__title.title-5 {
+    font-size: 18px;
+  }
+
+  .card-approach__title:before {
+    height: 40px;
+    width: 40px;
   }
 
   .partnership {
@@ -5446,10 +5490,6 @@ hr {
     margin-bottom: 60px;
   }
 
-  .team {
-    margin-bottom: 60px;
-  }
-
   .what-we-do .block-col-2 {
     margin-bottom: 60px;
   }
@@ -5470,28 +5510,28 @@ hr {
     font-size: 16px;
   }
 
+  .our-approach {
+    margin-bottom: 60px;
+  }
+
   .our-approach__title {
     margin-bottom: 25px;
   }
 
-  .card-approach {
-    padding-left: 30px;
+  .card-approach__title {
+    padding-right: 60px;
   }
 
   .card-approach__title {
     margin-bottom: 15px;
   }
 
-  .card-approach__title:before {
-    height: 25px;
-    width: 25px;
-    top: 1px;
-    left: -35px;
+  .card-approach__list > li:not(:last-child) {
+    margin-bottom: 15px;
   }
 
   .card-approach__list > li {
     font-size: 18px;
-    margin-bottom: 15px;
   }
 
   .partnership {
