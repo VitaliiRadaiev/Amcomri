@@ -3920,7 +3920,7 @@ hr {
 .card-approach__title:before {
   position: absolute;
   content: '';
-  top: -10px;
+  top: 0px;
   right: 127px;
   height: 55px;
   width: 55px;
