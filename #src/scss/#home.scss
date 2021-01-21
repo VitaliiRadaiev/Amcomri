@@ -1,6 +1,6 @@
 .promo-slider {
     position: relative;
-    margin-bottom: 171px;
+    margin-bottom: 128.25px;
 
     @include mb();
 
@@ -364,11 +364,12 @@
     background-color: #f7f7f7;
     padding: 100px 0 125px;
 
-    margin-bottom: 130px;
-    @include mb();
+    margin-bottom: 80px;
+   
 
     @media (max-width: $md3+px) {
         padding: 50px 0 65px;
+        margin-bottom: 60px;
     }
 
     &__title {
@@ -434,8 +435,6 @@
 
 
 .latest-news {
-    margin-bottom: 109px;
-    @include mb();
 
     &__body {
     }

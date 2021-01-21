@@ -36,7 +36,7 @@ hr {
 
 .hero {
     position: relative;
-    margin-bottom: 158px;
+    margin-bottom: 128.25px;
 
     @include mb();
 
@@ -210,10 +210,8 @@ hr {
     display: flex;
     width: 87%;
     justify-content: space-between;
-    margin-bottom: 100px; 
+    margin-bottom: 70px; 
     flex-wrap: wrap;
-
-    @include mb();
 
     @media (max-width: $md2+px) {
         display: block;
@@ -221,6 +219,7 @@ hr {
 
     @media (max-width: $md3+px) {
         width: 100%;
+        margin-bottom: 60px;
     }
 
     & .brend-logo {
@@ -252,7 +251,7 @@ hr {
             &:first-child {
                 font-size: 20px;
                 line-height: 1.3em;
-                margin-bottom: 4.8em;
+                margin-bottom: 1.8em;
             }
 
             & ~ .btn-default {
@@ -289,7 +288,7 @@ hr {
 .text-block {
     text-align: center;
     max-width: 643px;
-    margin-bottom: 176px;
+    margin-bottom: 128.25px;
     text-align: center;
 
     @include mb();

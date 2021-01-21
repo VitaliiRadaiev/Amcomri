@@ -9,20 +9,20 @@
 
     &__title {
         text-align: center;
-        margin-bottom: 89px;
+        margin-bottom: 50px;
     }
 
     &__filter {
-        margin-bottom: 99px;
+        margin-bottom: 50px;
     }
 
     &__list {
         display: flex;
         flex-wrap: wrap;
-        margin: 0 -23px 59px;
+        margin: 0 -23px 0px;
 
         @media (max-width: $md2+px) {
-            margin: 0 -10px 70px;
+            margin: 0 -10px 10px;
         }
 
         & > li {
@@ -48,6 +48,8 @@
     &__btn-wrap {
         text-align: center;
         margin-bottom: 118px;
+        
+        @include mb();
     }
 
     &__btn {

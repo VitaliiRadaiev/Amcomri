@@ -47,10 +47,14 @@
 
 .slider {
     max-width: 1260px;
-    margin-bottom: 184px;
+    margin-bottom: 128.25px;
 
     @media (max-width: $md3+px) {
-        margin-bottom: 100px;
+        margin-bottom: 90px;
+	}
+	
+	@media (max-width: $md4+px) {
+        margin-bottom: 60px;
     }
 
 

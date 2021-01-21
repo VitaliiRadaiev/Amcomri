@@ -3,8 +3,11 @@
 }
 
 .companies-list {
-    margin-bottom: 160px;
-    @include mb();
+    margin-bottom: 70px;
+
+   @media (max-width: $md3+px) {
+    margin-bottom: 60px;
+   }
 
     &__body {
         display: flex;
