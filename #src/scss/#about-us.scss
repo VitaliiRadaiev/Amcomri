@@ -100,15 +100,15 @@
     }
 
     &__item {
-        margin-bottom: 75px;
+        margin-bottom: 30px;
 
         @media (max-width: $md3+px) {
-            margin-bottom: 55px;
+            margin-bottom: 25px;
         }
     }
 
     &__item-title {
-        margin-bottom: 0.52em;
+        margin-bottom: 0.32em;
 
         @media (max-width: $md4+px) {
             font-size: 18px;

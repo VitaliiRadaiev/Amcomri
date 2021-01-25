@@ -1,7 +1,9 @@
 .what-we-do {
     & .block-col-2 {
-        margin-bottom: 128.25px;
-        @include mb();
+        margin-bottom: 76px;
+        @media (max-width: $md3+px) {
+            margin-bottom: 60px;
+        }
     }
 }
 
