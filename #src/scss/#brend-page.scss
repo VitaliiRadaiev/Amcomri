@@ -2,12 +2,12 @@
 	& .block-col-2 {
 		margin-bottom: 20px;
 			& .column-1 {
-				margin-bottom: 60px;
+				margin-bottom: 30px;
 			}
 			& .column-2 {
 				flex: 0 1 100%;
 				max-width: 425px;
-				margin-bottom: 60px;
+				margin-bottom: 30px;
 			}
 	}
 }
@@ -48,16 +48,9 @@
 // == slider ======================================================================
 
 .slider {
-    max-width: 1260px;
-    margin-bottom: 96px;
+    max-width: 1460px;
+    margin-bottom: 48px;
 
-    @media (max-width: $md3+px) {
-        margin-bottom: 90px;
-	}
-	
-	@media (max-width: $md4+px) {
-        margin-bottom: 60px;
-    }
 
 
 	& .swiper-slide {

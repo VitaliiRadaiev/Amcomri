@@ -4,11 +4,12 @@ if(previewBlock) {
     previewText = new Swiper(previewBlock.querySelector('.preview-block__slider.swiper-container'), {
         spaceBetween: 0,
         //effect: 'fade',
+
         slidesPerView: 5,
         centeredSlides: true,
         loop: true,
         speed: 800,
-        
+        slideToClickedSlide: true,
         navigation: {
             nextEl: previewBlock.querySelector('.slider-btn.btn-next'),
             prevEl: previewBlock.querySelector('.slider-btn.btn-prev'),

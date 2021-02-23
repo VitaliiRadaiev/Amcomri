@@ -4,18 +4,17 @@
 
 
 .advantages {
-    margin-bottom: 128px;
+    margin-bottom: 64px;
     @include mb();
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 440px;
+    min-height: 340px;
     background-color: #f2f2f2;
-    padding: 90px 0 70px;
+    padding: 50px 0 40px;
 
-    @media (max-width: $md2+px) {
-        min-height: 450px;
-        padding: 85px 0 60px;
+    @media (max-width: $md3+px) {
+        padding: 40px 0 30px;
     }
 
     &__body {
@@ -70,7 +69,7 @@
 
 
 .our-values {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 
     &__body {
         display: flex;
@@ -96,7 +95,11 @@
 
     &__column-2 {
         flex: 1 1 auto;
-        max-width: 413px;;
+        max-width: 413px;
+
+        @media (min-width: 768px) {
+            padding-top: 6px;
+        }
     }
 
     &__item {
@@ -109,7 +112,8 @@
 
     &__item-title {
         margin-bottom: 0.32em;
-
+        color: $mainColor;
+        
         @media (max-width: $md4+px) {
             font-size: 18px;
         }

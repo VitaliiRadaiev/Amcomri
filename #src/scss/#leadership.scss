@@ -1,6 +1,6 @@
 .leadersip {
     & .hero {
-        margin-bottom: 143px;
+        margin-bottom: 70px;
         @include mb();
     }
 }
@@ -32,12 +32,12 @@
         & > li {
             padding: 0 55px;
             flex: 0 1 clamp(280px, 50%, 565px);
-            margin-bottom: 162px;
+            margin-bottom: 80px;
 
             @media (max-width: $md2+px) {
                 padding: 0 15px;
                 flex: 0 1 clamp(280px, 50%, 445px);
-                margin-bottom: 60px;
+                margin-bottom: 40px;
             }
 
             @media (max-width: 575px) {
@@ -52,10 +52,11 @@
 .card-lead {
 
     &__img {
-        padding-bottom: 101.5%;
+        width: 225px;
+        height: 235px;
         margin-bottom: 42px;
         border: 2px solid rgba(#979797, 0.8);
-
+        
         @media (max-width: $md2+px) {
             margin-bottom: 60px;
         }
@@ -79,14 +80,13 @@
             position: absolute;
             content: '';
             top: 50%;
-            transform: translateY(-50%);
+            transform: translateY(-50%) rotate(-90deg);
             left: -75px;
             height: 53px;
             width: 53px;
             display: block;
             background: url(../img/logo/logo-decor@2x.png) center no-repeat;
             background-size: contain;
-
             @media (max-width: $md2+px) {
                 left: 0;
                 top: -30px;

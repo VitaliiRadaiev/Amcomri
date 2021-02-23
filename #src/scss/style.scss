@@ -94,7 +94,7 @@ body {
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	color: $textColor;
-	font-size: 1.4rem;
+	font-size: 1.6rem;
 
 	opacity: 0;
 	transition: opacity .8s ease;
@@ -227,7 +227,7 @@ img {
 
 .brend-logo {
 	max-width: 287px;
-	margin-bottom: 70px;
+	margin-bottom: 35px;
 
 	& img {
 		width: 100%;
@@ -255,20 +255,35 @@ img {
 }
 
 .title-2 {
+	// font-family: $titleFontFamily;
+	// font-size: 50px;
+	// font-weight: 900;
+	// line-height: 1.3em;
+	// text-transform: uppercase;
+	// color: $mainColor;
+	// margin-top: 0;
+
+	// @media (max-width: $md3+px) {
+	// 	font-size: 40px;
+	// }
+
+	// @media (max-width: $md4+px) {
+	// 	font-size: 27px;
+	// }
+
 	font-family: $titleFontFamily;
-	font-size: 50px;
-	font-weight: 900;
-	line-height: 1.3em;
-	text-transform: uppercase;
 	color: $mainColor;
-	margin-top: 0;
+	font-size: 40px;
+	font-weight: 900;
+	line-height: 1.2em;
+	text-transform: uppercase;
 
 	@media (max-width: $md3+px) {
-		font-size: 40px;
+		font-size: 34px;
 	}
 
 	@media (max-width: $md4+px) {
-		font-size: 27px;
+		font-size: 24px;
 	}
 }
 
@@ -414,9 +429,9 @@ button.btn-default {
 
 // === TEXT CONTETN BLOCK ========================================================================
 .text-content {
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 400;
-	line-height: 1.74em;
+	line-height: 1.6em;
 
 	& h1 {}
 	& h2 {
@@ -427,7 +442,7 @@ button.btn-default {
 
 	& h5 {
 		font-family: $mainFontFamily;
-		font-size: 15px;
+		font-size: 16px;
 		font-weight: 700;
 		line-height: 1.1em;
 		margin-bottom: 1.6em;
@@ -435,10 +450,10 @@ button.btn-default {
 	& h6 {}
 
 	& p {
-		font-size: 14px;
+		font-size: 16px;
 		font-weight: 400;
-		line-height: 1.8em;
-		margin-bottom: 1.66em;
+		line-height: 1.6em;
+		margin-bottom: 1.8em;
 
 		& ~ h5 {
 			margin-top: 2.8em;
@@ -462,6 +477,15 @@ button.btn-default {
 		}
 		& img {
 			width: 100%;
+			height: auto;
+		}
+	}
+
+	& > a {
+		color: #0599f1;
+
+		&:hover {
+			text-decoration: underline;
 		}
 	}
 

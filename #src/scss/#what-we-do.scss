@@ -1,26 +1,19 @@
 .what-we-do {
-    & .block-col-2 {
-        margin-bottom: 76px;
-        @media (max-width: $md3+px) {
-            margin-bottom: 60px;
-        }
-    }
+
 }
 
 
 .transaction-types {
     background-color: #f2f2f2;
-    padding: 100px 0 110px;
-    margin-bottom: 128.25px;
-    @include mb();
-
+    padding: 50px 0 45px;
+    margin-bottom: 64px;
 
     @media (max-width: $md3+px) {
-        padding: 115px 0 61px;
+        margin-bottom: 50px;
     }
 
     @media (max-width: $md4+px) {
-        padding: 65px 0 30px;
+        padding: 40px 0 30px;
     }
 
     &__body {
@@ -28,18 +21,18 @@
     }
 
     &__title {
-        margin-bottom: 67px;
+        margin-bottom: 34px;
 
         @media (max-width: $md3+px) {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
     }
 
     &__nav {
-        margin-bottom: 86px;
+        margin-bottom: 43px;
 
         @media (max-width: $md3+px) {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
     }
 
@@ -163,7 +156,7 @@
         }
 
         &.text-content {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 300;
             letter-spacing: normal;
             line-height: 1.3em;
@@ -173,10 +166,11 @@
             }
 
             & p {
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: 300;
                 letter-spacing: normal;
                 line-height: 1.3em;
+
                 @media (max-width: $md4+px) {
                     font-size: 16px;
                 }
@@ -188,7 +182,8 @@
 
 
 .our-approach {
-    margin-bottom:128px;
+    margin-bottom:45px;
+
     @include mb();
 
     &__body {
@@ -264,9 +259,20 @@
             margin-bottom: 15px;
         }
 
+        @media (min-width: 992px) {
+            &:hover {
+                &:before {
+                    background: url(../img/logo/logo-decor@2x.png) center no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+
         &._active {
             &:before {
-                transform: rotate(90deg);
+                transform: rotate(0deg);
+                background: url(../img/logo/logo-decor@2x.png) center no-repeat;
+                background-size: contain;
             }
         }
 
@@ -278,10 +284,11 @@
             height: 55px;
             width: 55px;
             display: block;
-            background: url(../img/logo/logo-decor@2x.png) center no-repeat;
+            background: url(../img/logo/logo-decor-white@2x.png) center no-repeat;
             background-size: contain;
             transition: all .2s ease;
-
+            transform: rotate(-90deg);
+            z-index: 2;
             @media (max-width: $md2+px) {
                 right: 0;
             }
@@ -290,6 +297,8 @@
                 height: 40px;
                  width: 40px;
             }
+
+
         }
     }
 
@@ -299,13 +308,13 @@
         & > li {
             position: relative;
             padding-left: 22px;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 400;
             line-height: 1.3em;
             color: #000;
 
             &:not(:last-child) {
-                margin-bottom: 25px;
+                margin-bottom: 10px;
 
                 @media (max-width: $md4+px) {
                     margin-bottom: 15px;
@@ -313,7 +322,7 @@
             }
 
             @media (max-width: $md4+px) {
-                font-size: 18px;
+                font-size: 16px;
             }
 
             &:before {
@@ -335,7 +344,7 @@
 
 
 .partnership {
-    margin-bottom: 128px;
+    margin-bottom: 64px;
     @include mb();
 
     &__body {
@@ -351,11 +360,11 @@
     &__column {
         flex: 0 1 50%;
         &_1 {
-            padding:97px 84px 77px 102px;
+            padding:50px 84px 50px 102px;
             background-color: $mainColor;
 
             @media (max-width: $md2+px) {
-                padding:60px 30px 40px 30px;
+                padding:40px 30px 40px 30px;
             }
         }
 
@@ -380,5 +389,9 @@
     &__text {
         color: #fff;
         max-width: 353px;
+
+        & *:last-child {
+            margin-bottom: 0;
+        }
     }
 }
